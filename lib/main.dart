@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:task_ui/pages/PartyPrediction.dart';
 import 'package:task_ui/pages/homescreen.dart';
+import 'package:task_ui/pages/information.dart';
+import 'package:task_ui/pages/information2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,7 +36,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: homescreen(),
+      home:homescreen(),
     );
   }
 }
+

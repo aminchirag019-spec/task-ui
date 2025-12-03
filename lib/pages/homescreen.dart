@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:task_ui/global/appbar.dart';
+import 'package:task_ui/pages/PartyPrediction.dart';
 
 class homescreen extends StatelessWidget {
   const homescreen({super.key});
@@ -37,8 +38,8 @@ class homescreen extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: Colors.blue,
                             borderRadius: BorderRadius.circular(15),
-                            image: DecorationImage(image: AssetImage('assets/images/Profile.jpg'),
-                                fit:BoxFit.cover
+                            image: DecorationImage(image: AssetImage("assets/images/slider.png"),
+                            fit: BoxFit.fill
                             )),
                       ),
                       Container(
@@ -48,6 +49,8 @@ class homescreen extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: Colors.green,
                           borderRadius: BorderRadius.circular(15),
+                            image: DecorationImage(image: AssetImage("assets/images/slider.png"),
+                            fit: BoxFit.fill)
                         ),
                       ),
                       Container(
@@ -57,9 +60,11 @@ class homescreen extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: Colors.orange,
                             borderRadius: BorderRadius.circular(15),
-                            image:DecorationImage(image: AssetImage('assets/images/slider.png'))
-                        ),
+                            image:DecorationImage(image: AssetImage("assets/images/slider.png"),
+                            fit:BoxFit.fill
+                            )
                       ),
+                      )
                     ],
                   ),
                 ),
@@ -124,7 +129,7 @@ class homescreen extends StatelessWidget {
                                                     context,
                                                     MaterialPageRoute(
                                                       builder: (context) =>
-                                                          homescreen(),
+                                                          partyprediction(),
                                                     ));
                                               },
                                               child: Text(
@@ -141,7 +146,7 @@ class homescreen extends StatelessWidget {
                                                   context,
                                                   MaterialPageRoute(
                                                     builder: (context) =>
-                                                        homescreen(),
+                                                        partyprediction(),
                                                   ));
                                             },
                                             child: Text(
