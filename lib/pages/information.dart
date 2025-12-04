@@ -12,31 +12,21 @@ class information extends StatelessWidget {
       backgroundColor: Color(0xFFF4EDEB),
       body:Padding(
         padding: const EdgeInsets.all(8.0),
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-            children: [
-              informationpage(),
-              SizedBox(height: 10,),
-              informators(),
-              SizedBox(height: 10,),
-              informators(),
-              SizedBox(height: 10,),
-              informators(),
-              SizedBox(height: 10,),
-              informators(),
-              SizedBox(height: 10,),
-              informators(),
-              SizedBox(height: 10,),
-              informators(),
-              SizedBox(height: 10,),
-              informators(),
-              SizedBox(height: 10,),
-              informators(),
-              SizedBox(height: 10,),
-            ],
-          ),
-        ),
+        child: ListView.builder(
+          itemBuilder: (context, index) {
+              if (index==0){
+                return Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 7),
+                  child: informationpage(),
+                );
+              }
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical:5),
+                child: contributionsnames(),
+              );
+        },
+        itemCount: 15,
+        )
       ),
     );
   }
