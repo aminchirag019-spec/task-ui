@@ -12,7 +12,7 @@ class homescreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFF4EDEB),
-      appBar: appbar1("Election"),
+      //appBar: appbar1("Election"),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(

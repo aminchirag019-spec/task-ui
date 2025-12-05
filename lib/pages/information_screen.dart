@@ -8,7 +8,7 @@ class information extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbar1("Add information"),
+    //  appBar: appbar1("Add information"),
       backgroundColor: Color(0xFFF4EDEB),
       body:Padding(
         padding: const EdgeInsets.all(8.0),

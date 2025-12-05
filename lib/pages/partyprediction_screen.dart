@@ -13,7 +13,7 @@ class partyprediction extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Scaffold(
-        appBar: appbar1("Party Prediction"),
+     //   appBar: appbar1("Party Prediction"),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
