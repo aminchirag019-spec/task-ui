@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'common_party.dart';
 
-import '../global/appbar.dart';
-
-
-
-class partyprediction extends StatelessWidget {
-  const partyprediction({super.key});
+class PartyPredictionScreen extends StatelessWidget {
+  const PartyPredictionScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,16 +16,16 @@ class partyprediction extends StatelessWidget {
           children: [
             Row(
               children: [
-                Expanded(child: coustomcontainer(votes: "7")),
+                Expanded(child: CoustomContainer(votes: "7")),
                  SizedBox(width: 8),
-                Expanded(child: coustomcontainer(votes: "7")),
+                Expanded(child: CoustomContainer(votes: "7")),
                  SizedBox(width: 8),
-                Expanded(child: coustomcontainer(votes: "7")),
+                Expanded(child: CoustomContainer(votes: "7")),
               ],
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 5),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical:5),
               child: Text(
                 "List of people",
                 style: GoogleFonts.roboto(
@@ -40,12 +37,12 @@ class partyprediction extends StatelessWidget {
             Expanded(
               child: ListView.builder(
                 padding: const EdgeInsets.symmetric(vertical: 8),
-                itemCount: 15,
+                itemCount: 9,
                 itemBuilder: (context, index) {
                   return
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 5),
-                      child: selection(),
+                      child: Selection(),
                     );
                 },
               ),

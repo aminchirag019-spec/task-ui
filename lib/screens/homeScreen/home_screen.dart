@@ -1,12 +1,11 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Slider;
 import 'package:google_fonts/google_fonts.dart';
-import 'package:task_ui/Bottomnavbar/bottom.dart';
-import 'package:task_ui/global/appbar.dart';
-import 'package:task_ui/pages/PartyPrediction.dart';
-import 'package:task_ui/utils/utilities.dart';
 
-class homescreen extends StatelessWidget {
-  const homescreen({super.key});
+import 'common_class.dart';
+
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,16 +19,15 @@ class homescreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Text(
                 "Announcements",
                 style:
                     GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
+            Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8,horizontal: 10),
                 child: SizedBox(
                   height: MediaQuery.of(context).size.height * 0.25,
                   child: GridView.builder(
@@ -38,12 +36,11 @@ class homescreen extends StatelessWidget {
                           childAspectRatio: 0.57, crossAxisCount: 1),
                       itemCount: 3,
                       itemBuilder: (context, index) {
-                        return slider();
+                        return Slider();
                       }),
                 ),
               ),
-            ),
-            quickactionUI(),
+            QuickActionUI(),
             Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
@@ -54,8 +51,8 @@ class homescreen extends StatelessWidget {
                 ),
             ),
             SizedBox(height: 10,),
-            cards(),
-            cards()
+            Cards(),
+            Cards()
           ]
         ),
       ),
